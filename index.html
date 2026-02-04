@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Landing</title>
+  <title>3D Game Artist Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet" />
@@ -14,50 +14,69 @@
   <div class="bg-glow glow-b"></div>
 
   <header class="topbar">
-    <div class="brand">JUJIN PORTFOLIO</div>
-    <a class="ghost-btn" href="#contact">Contact</a>
+    <div class="brand">JUJIN 3D ART PORTFOLIO</div>
+    <div class="topbar-actions">
+      <button id="langToggle" class="ghost-btn" type="button">EN</button>
+      <a class="ghost-btn" href="#contact" data-ko="연락하기" data-en="Contact">연락하기</a>
+    </div>
   </header>
 
   <main class="hero">
-    <p class="kicker">DESIGN · CODE · STORY</p>
-    <h1>사람의 시간을 아끼는<br />경험을 만듭니다.</h1>
-    <p class="summary">
-      프론트엔드 개발과 제품 감각을 바탕으로,
-      명확하고 인상적인 디지털 경험을 설계합니다.
-    </p>
+    <p class="kicker" data-ko="GAME ART · 3D MODELING · WORLD BUILDING" data-en="GAME ART · 3D MODELING · WORLD BUILDING">GAME ART · 3D MODELING · WORLD BUILDING</p>
+    <h1 data-ko="플레이어가 머무는 세계를<br />3D 아트로 설계합니다." data-en="I craft immersive worlds where players want to stay.">플레이어가 머무는 세계를<br />3D 아트로 설계합니다.</h1>
+    <p class="summary" data-ko="게임 3D 아티스트로서 환경, 소품 제작부터 텍스처링과 최적화까지 전체 파이프라인을 책임집니다." data-en="As a game 3D artist, I handle full production from environment and prop creation to texturing and in-engine optimization.">게임 3D 아티스트로서 환경, 소품 제작부터 텍스처링과 최적화까지 전체 파이프라인을 책임집니다.</p>
 
     <div class="cta-row">
-      <a class="cta primary" href="#work">프로젝트 보기</a>
-      <a class="cta secondary" href="#about">소개 보기</a>
+      <a class="cta primary" href="#projects" data-ko="대표 작업 보기" data-en="View Featured Projects">대표 작업 보기</a>
+      <a class="cta secondary" href="#about" data-ko="아티스트 소개" data-en="About the Artist">아티스트 소개</a>
     </div>
 
     <section id="work" class="card-grid">
       <article class="card reveal">
-        <h2>Web Products</h2>
-        <p>React 기반 대시보드, 랜딩페이지, SaaS UI 설계 및 구현</p>
+        <h2>Environment Art</h2>
+        <p data-ko="게임 분위기와 내러티브를 전달하는 배경 제작, 라이팅, 씬 구성" data-en="Environment production, lighting, and scene composition that support mood and narrative.">게임 분위기와 내러티브를 전달하는 배경 제작, 라이팅, 씬 구성</p>
       </article>
       <article class="card reveal">
-        <h2>Brand Experiences</h2>
-        <p>브랜드 톤을 살리는 인터랙션과 비주얼 시스템 구축</p>
+        <h2>Prop & Optimization</h2>
+        <p data-ko="소품 제작, PBR 머티리얼, LOD/폴리곤 최적화로 실전 엔진 대응" data-en="Prop modeling, PBR materials, and LOD/polygon optimization for production-ready engine use.">소품 제작, PBR 머티리얼, LOD/폴리곤 최적화로 실전 엔진 대응</p>
       </article>
       <article class="card reveal">
-        <h2>Performance Focus</h2>
-        <p>빠른 로딩, 접근성, 유지보수 가능한 코드 구조까지 고려</p>
+        <h2>Pipeline Collaboration</h2>
+        <p data-ko="기획, TA, 클라이언트 팀과 협업하며 일정과 퀄리티를 함께 관리" data-en="Cross-team pipeline collaboration with design, TA, and client teams to balance quality and timeline.">기획, TA, 클라이언트 팀과 협업하며 일정과 퀄리티를 함께 관리</p>
       </article>
     </section>
   </main>
 
+  <section id="projects" class="projects">
+    <h2 data-ko="Featured Projects" data-en="Featured Projects">Featured Projects</h2>
+    <div class="project-grid">
+      <article class="project-card reveal">
+        <p class="project-type">Environment</p>
+        <h3 data-ko="붕괴된 사원 유적" data-en="Collapsed Temple Ruins">붕괴된 사원 유적</h3>
+        <p data-ko="고대 판타지 세계관 기반의 배경 씬 제작. 키 아트 콘셉트 해석, 모듈러 구조 설계, 최종 라이팅 작업을 담당했습니다." data-en="Built a fantasy ruins environment from key art, including modular kit planning and final lighting pass.">고대 판타지 세계관 기반의 배경 씬 제작. 키 아트 콘셉트 해석, 모듈러 구조 설계, 최종 라이팅 작업을 담당했습니다.</p>
+        <p class="stack">Maya · ZBrush · Substance 3D Painter · Unreal Engine</p>
+      </article>
+      <article class="project-card reveal">
+        <p class="project-type">Prop Set</p>
+        <h3 data-ko="SF 공장 소품 세트" data-en="Sci-Fi Factory Prop Set">SF 공장 소품 세트</h3>
+        <p data-ko="반복 배치에 최적화된 하드서피스 소품 세트 제작. 텍스처 아틀라스와 LOD 단계 구성으로 퍼포먼스를 개선했습니다." data-en="Created a hard-surface prop set for repeated placement, improving runtime performance with atlas textures and LOD tiers.">반복 배치에 최적화된 하드서피스 소품 세트 제작. 텍스처 아틀라스와 LOD 단계 구성으로 퍼포먼스를 개선했습니다.</p>
+        <p class="stack">Blender · Substance 3D Painter · Marmoset Toolbag · Unity</p>
+      </article>
+    </div>
+  </section>
+
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>
-      문제를 빠르게 정의하고, 핵심을 단순하게 풀어내는 것을 좋아합니다.
-      사용자와 비즈니스 모두에게 가치 있는 결과를 목표로 일합니다.
-    </p>
+    <p data-ko="기획 의도를 시각적으로 해석해 플레이 경험으로 연결하는 일을 좋아합니다. Maya, Blender, ZBrush, Substance 3D Painter, Unreal/Unity 기반의 제작 경험을 보유하고 있습니다." data-en="I enjoy turning design intent into memorable play experiences through clear visual storytelling. My workflow includes Maya, Blender, ZBrush, Substance 3D Painter, Unreal, and Unity.">기획 의도를 시각적으로 해석해 플레이 경험으로 연결하는 일을 좋아합니다. Maya, Blender, ZBrush, Substance 3D Painter, Unreal/Unity 기반의 제작 경험을 보유하고 있습니다.</p>
   </section>
 
   <footer id="contact" class="footer">
     <p>hello@yourmail.com</p>
-    <p>© 2026 JUJIN</p>
+    <p class="social-links">
+      <a href="https://www.artstation.com" target="_blank" rel="noreferrer">ArtStation</a>
+      <a href="https://www.behance.net" target="_blank" rel="noreferrer">Behance</a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>

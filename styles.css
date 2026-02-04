@@ -51,6 +51,7 @@ body {
 
 .topbar,
 .hero,
+.projects,
 .about,
 .footer {
   width: min(1024px, calc(100% - 2rem));
@@ -64,6 +65,11 @@ body {
   padding: 1.4rem 0;
 }
 
+.topbar-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
 .brand {
   font-size: 0.86rem;
   letter-spacing: 0.16em;
@@ -71,11 +77,15 @@ body {
 }
 
 .ghost-btn {
+  background: transparent;
   border: 1px solid var(--line);
   color: var(--text);
   text-decoration: none;
   padding: 0.55rem 0.95rem;
   border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
   transition: border-color 180ms ease, transform 180ms ease;
 }
 
@@ -147,7 +157,8 @@ h1 {
   gap: 1rem;
 }
 
-.card {
+.card,
+.project-card {
   padding: 1.15rem;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -156,15 +167,44 @@ h1 {
   opacity: 0;
 }
 
-.card h2 {
+.card h2,
+.project-card h3 {
   margin: 0;
-  font-size: 1.05rem;
 }
 
-.card p {
+.card p,
+.project-card p {
   margin: 0.62rem 0 0;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.projects {
+  padding: 0.8rem 0 2.8rem;
+}
+
+.projects h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.project-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-type {
+  margin: 0;
+  color: var(--accent-soft);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.stack {
+  font-size: 0.9rem;
 }
 
 .about {
@@ -194,6 +234,21 @@ h1 {
   font-size: 0.92rem;
 }
 
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--accent-soft);
+}
+
 .reveal.show {
   animation: riseIn 520ms ease forwards;
 }
@@ -210,7 +265,8 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .card-grid {
+  .card-grid,
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
